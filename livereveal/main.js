@@ -33,7 +33,7 @@ var config = new configmod.ConfigWithDefaults(config_section, {
     start_slideshow_at: 'beginning',
 });
 
-IPython.notebook.get_cell_elements = function () {
+Object.getPrototypeOf(IPython.notebook).get_cell_elements = function() {
   /*
   * Version of get_cell_elements that will see cell divs at any depth in the HTML tree,
   * allowing container divs, etc to be used without breaking notebook machinery.
